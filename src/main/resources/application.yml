@@ -1,0 +1,18 @@
+server:
+  port: 9090
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      auto-offset-reset: earliest
+    producer:
+      bootstrap-servers: localhost:9092
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    properties:
+      delivery.timeout.ms: 40000
+kafka:
+  topic:
+    topic: test_001
+    partition: 1
+    replicas: 1
