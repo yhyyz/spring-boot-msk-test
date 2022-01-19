@@ -28,11 +28,11 @@ public class MessageProducer {
             @Override
             public void onSuccess(SendResult<String, Object> sendResult) {
                 logger.info("Success发送消息到" + topic + "-> " + sendResult.getProducerRecord().value().toString());
-//                try {
-//                    Thread.sleep(200);
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
+                try {
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
             @Override
             public void onFailure(Throwable throwable) {
